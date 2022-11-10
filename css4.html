@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width:740px;
+            margin:0 auto;
+        }
+        .header{
+            background: black;
+            width:100%;
+            /*height:335px;*/
+            padding:20px 20px 0px 20px;
+            box-sizing: border-box;
+        }
+        .header-nav{
+            background: #999;
+            padding:9px 4px;
+        }
+        .nav{
+            list-style-type:none;
+            margin:0;
+            padding:0px;
+        }
+        .nav-item{
+            display:inline-block;
+        }
+        .nav-link{
+            padding:4px;
+            color:white;
+            text-decoration: none;
+        }
+        .blue{
+            background: #51a7ac;
+        }
+        .green{
+            background: #89b453;
+        }
+        .red{
+            background: #e8301d;
+        }
+        .yellow{
+            background: #f6c640;
+        }
+        .orange{
+            background: #f07f30;
+        }
+        .header-body{
+            background: white;
+            padding:20px 50px 30px 50px;
+            text-align: center;
+        }
+        .header-body h1{
+            color:#e8301d;
+            transform: scaleY(2);
+            font-family: 'Lucida Console';
+            margin-top:10px;
+        }
+        .header-body h3{
+            color:#787878;
+        }
+        .header-body p{
+            color:#c7c7c7;
+            line-height:1.8;
+            margin-bottom:0px;
+        }
+        .subtitle{
+            text-align: center;
+            color:white;
+            font-weight: bold;
+            padding:13px 0px;
+            font-family:'Courier';
+        }
+        .main{
+            background: gold;
+            width:100%;
+            /*height:325px;*/
+            display:flex;
+        }
+        .item{
+            width:148px;
+            box-sizing: border-box;
+            flex:1;
+            padding:15px 10px 45px 10px;
+            text-align:center;
+            font-size:12px;
+        }
+        .item-img{
+            padding:5px;
+            border-radius:20px;
+            display:inline-block;
+            box-shadow:0px 1px 2px 0px rgb(0 0 0 / 80%);
+        }
+ 
+        .item-img img{
+            height:30px;
+
+        }
+        .light-blue{
+            background: #a2d6d9;
+        }
+ 
+        .light-red{
+            background: #f48871;
+        }
+ 
+        .light-yellow{
+            background: #fae17c;
+        }
+ 
+        .light-orange{
+            background: #f6b56b;
+        }
+ 
+        .light-green{
+            background: #b9d694;
+        }
+
+        .light-blue > h5{
+            color: #51a7ac;
+        }
+ 
+        .light-red > h5{
+            color: #e8301d;
+        }
+ 
+        .light-yellow > h5{
+            color: #f6c640;
+        }
+ 
+        .light-orange > h5{
+            color: #f07f30;
+        }
+ 
+        .light-green > h5{
+            color: #89b453;
+        }
+
+        .item > h5{
+            text-transform: uppercase;
+            font-size:13px;
+            text-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.9);
+        }
+        .item > span{
+            color:white;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row header">
+            <div class="header-content">
+                <div class="header-nav">
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link blue">File</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link red">Edit</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link green">View</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link yellow">Tools</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link orange">Help</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="header-body">
+                    <h1>HTML AND CSS</h1>
+                    <h3>< CHEAT SHEET ></h3>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima reprehenderit, exercitationem dolor suscipit facilis sit, non magni, accusantium ut dolores nam temporibus dolore beatae accusamus, molestiae officia aperiam eveniet est. n magni, accusantium ut dolores nam temporibus dolore beatae .
+                    </p>
+                </div>
+            </div>
+            <div class="subtitle">
+                A TITLE FOR BEGINNERS
+            </div>
+        </div>
+        <div class="row main">
+            <div class="item light-blue">
+                <span class="item-img blue">
+                    <img src="https://static.thenounproject.com/png/89200-200.png" alt="">
+                </span>
+                <h5>
+                    HTML
+                </h5>
+                <span>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam, quam velit eligendi fuga nobis fugiat repellat modi delectus aperiam, culpa laborum magni. Distinctio, velit. Consequatur magni quia, quisquam error
+                </span>
+            </div>
+            <div class="item light-red">
+                <span class="item-img red">
+                    <img src="https://static.thenounproject.com/png/3803708-200.png" alt="">
+                </span>
+                <h5>
+                    CSS
+                </h5>
+                <span>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam, quam velit eligendi fuga nobis fugiat repellat modi delectus aperiam, culpa laborum magni. Distinctio, velit. Consequatur magni quia, quisquam error
+                </span>
+            </div>
+            <div class="item light-green">
+                <span class="item-img green">
+                    <img src="https://static.thenounproject.com/png/3532081-200.png" alt="">
+                </span>
+                <h5>
+                    Snippets
+                </h5>
+                <span>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam, quam velit eligendi fuga nobis fugiat repellat modi delectus aperiam, culpa laborum magni. Distinctio, velit. Consequatur magni quia, quisquam error
+                </span>
+            </div>
+            <div class="item light-yellow">
+                <span class="item-img yellow">
+                    <img src="https://static.thenounproject.com/png/3805888-200.png" alt="">
+                </span>
+                <h5>
+                    Tags
+                </h5>
+                <span>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam, quam velit eligendi fuga nobis fugiat repellat modi delectus aperiam, culpa laborum magni. Distinctio, velit. Consequatur magni quia, quisquam error
+                </span>
+            </div>
+            <div class="item light-orange">
+                <span class="item-img orange">
+                    <img src="https://static.thenounproject.com/png/1489354-200.png" alt="">
+                </span>
+                <h5>
+                    Hyperlinks
+                </h5>
+                <span>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam, quam velit eligendi fuga nobis fugiat repellat modi delectus aperiam, culpa laborum magni. Distinctio, velit. Consequatur magni quia, quisquam error
+                </span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
