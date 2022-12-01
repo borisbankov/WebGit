@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script>
+
+		const task1 = () => {
+			for(let i = 0; i <= 10; i++){
+				console.log(i);
+			}
+		}
+
+		// task1();
+
+		const task2 = () => {
+			let r = "";
+			for(let i = 10; i >= 0; i--){
+				r = r + i + " ";
+				console.log(r);
+			}
+		}
+
+		// task2();
+
+		const task3 = () => {
+			let word1 = prompt("word1:");
+			let word2 = prompt("word2:");
+			if(word1.length > word2.length){
+				console.log('pyrvata');
+			} else if(word2.length > word1.length){
+				console.log('vtorata');
+			} else {
+				console.log('ravni sa');
+			}
+		}
+
+		// task3();
+
+		const task4 = () => {
+			let num = prompt('vyvedete chislo');
+			for(let i = 0; i < num.length; i++){
+				console.log(num[i]);
+			}
+
+			// let ostatyk = 0;
+			// while(num > 0){
+			// 	ostatyk = num % 10;
+			// 	num = parseInt(num / 10);
+			// 	console.log(ostatyk);
+			// }
+		}
+		// task4();
+
+		const task6 = () => {
+			let num = prompt("chisla molq");
+			let arr = num.split(", ");
+			let sum = 0;
+			for(let i = 0; i < arr.length; i++){
+				sum = sum + parseInt(arr[i]);
+				console.log(sum);
+			}
+			console.log(sum);
+		}
+
+		// task6();
+
+		const task5 = () => {
+			let num = parseInt(prompt('chislo molq'));
+
+			for(let i = 1; i <= num; i = i * 2){
+				console.log(i);
+			}
+		}
+
+		task5();
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
