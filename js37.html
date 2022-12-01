@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const task1 = () => {
+            for(var i = 0; i <= 10; i++) {
+                console.log(i);
+            }
+        }
+
+        // task1();
+
+        const task2 = () => {
+            let r = "";
+            for(let i = 10; i >= 0; i--){
+                r = r + i + " ";
+            }
+            console.log(r);
+        }
+
+        // task2();
+
+        const task3 = () => {
+            let word1 = prompt("enter word1:");
+            let word2 = prompt("enter word2:");
+            if(word1.length > word2.length){
+                console.log(word1 + " is longer");
+            } else if(word2.length > word1.length){
+                console.log(word2 + " is longer");
+            } else {
+                console.log(word1 + " and " + word2 + " are equal length");
+            }
+        }
+
+        // task3();
+        
+        const task4 = () => {
+            let numb = prompt("enter number:");
+            for(let i = 0; i < numb.length; i++){
+                console.log(numb[i]);
+            }
+            let ostatyk;
+            while(numb > 0){
+                ostatyk = numb % 10;
+                numb = parseInt(numb / 10);
+                console.log(ostatyk);
+            }
+        }
+        // task4();
+
+        const task5 = () => {
+            let numb = parseInt(prompt("enter number:"));
+            for (let i = 1; i < numb; i = i * 2) {
+                console.log(i);
+            }
+        }
+
+        // task5();
+
+        const task6 = () => {
+            let numb = prompt("enter numbers:")
+            // 1 2 3 4
+            let arr = numb.split(", ");
+            let sum = 0;
+            for (let i = 0; i < arr.length; i++) {
+                sum = sum + parseInt(arr[i]);
+            }
+            // arr.map(i => sum+=parseInt(i));
+
+            console.log(sum);
+        }
+
+        // task6();
+
+        const task7 = () => {
+            let input = prompt("enter height, speedUp, speedDown:");
+            let arr = input.split(" ");
+            let height = parseInt(arr[0]);
+            let speedUp = parseInt(arr[1]);
+            let speedDown = parseInt(arr[2]);
+            let days = 0;
+            let climbedHeight = 0;
+            while(climbedHeight < height){
+                climbedHeight = climbedHeight + speedUp;
+                if(climbedHeight < height){
+                    climbedHeight = climbedHeight - speedDown;
+                }
+                days++;
+            }
+            console.log(days);
+        }
+
+        // task7();
+
+        const task9 = (color) => {
+            document.body.style.background = color;
+        }
+
+        const rndColor = () => {
+            let rnd = 'rgb(' + Math.floor(Math.random()*256) + ', ' +
+                               Math.floor(Math.random()*256) + ', ' +
+                               Math.floor(Math.random()*256) + ')';
+                               
+            return rnd; 
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            task9(rndColor());
+        });
+    </script>
+</head>
+<body>
+    
+
+
+
+    
+</body>
+</html>
