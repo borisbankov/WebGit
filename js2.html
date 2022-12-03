@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => { 
+            // let links = document.querySelectorAll('a');
+            // for(let i = 0; i < links.length; i++){
+            //     console.log(links[i].innerHTML);
+            // }
+            // links.forEach(item => { 
+            //     console.log(item.innerHTML);
+            // });
+            // let a = document.getElementsByTagName('a');
+            // console.log(a);
+            // for(let i = 0; i < a.length; i++){
+            //     console.log(a[i].innerHTML);
+            // }
+            // [...a].forEach(item => { 
+            //     console.log(item.innerHTML);
+            // });
+
+            let t = document.querySelectorAll('.title');
+            t.forEach(item => {
+                console.log(item.innerText);
+            });
+
+            let p = document.querySelectorAll('p');
+            p.forEach((item, i) => {
+                item.innerText = '"НОВ ПАРАГРАФ"' + i;
+            });
+
+            let img = document.querySelectorAll('img');
+            img.forEach(item => {
+                console.log(item.src);
+            });
+
+            img.forEach((item, index) => {
+                if(index == 0){
+                    item.src = 'https://placehold.co/300x300'
+                } else {
+                    item.src = 'https://cataas.com/c';
+                }
+            });
+
+            img.forEach(item => {
+                console.log(item.parentNode.parentNode.getAttribute('class'));
+                item.parentNode.parentNode.style['background'] = 'red';
+            });
+
+            let el = document.querySelector('div.page');
+            el.setAttribute('class', 'page-2');
+
+            img.forEach(item => {
+                item.style['border'] = 'solid 5px green';
+            });
+
+            img.forEach(item => {
+                item.addEventListener('mouseenter', (e) => { 
+                    e.target.style['border'] = 'solid 15px gold';
+                });
+
+                item.addEventListener('mouseleave', (e) => {
+                    e.target.style['border'] = 'solid 8px indigo';
+                });
+            });
+
+            let anchor = document.querySelectorAll('a');
+            anchor.forEach(item => {
+                item.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    let color = Math.floor(Math.random()*256*256*256).toString(16);
+                    document.body.style['background'] = '#' + color;
+                });
+            }); 
+
+            p[0].style['display'] = 'none';
+            p[p.length-1].style['display'] = 'none';
+
+        });
+    </script>
+    <style>
+        p{
+            margin:12px 16px;
+            color:white;
+        }
+        .nav{
+            padding:10px;
+        }
+        .page{
+            background-color: cadetblue;
+            width: 420px;
+        }
+ 
+        .page-2 {
+            background:royalblue;
+            width: 600px;
+        }
+        ul{
+            display: flex;
+            flex-direction: row;
+            list-style-type: none;
+            vertical-align: top;
+            margin:10px 0px;
+            padding:0px;
+        }
+        ul>li{ 
+            width:25%;
+            margin:0 8px;
+        }
+        .nav a{
+            text-decoration: none;
+            color: crimson;
+            display: inline-block;
+            border: 5px solid black;
+            background-color: cornsilk;
+            padding: 5px;
+        }
+        a:hover {
+            background-color: crimson;
+            color: cornsilk;
+        }
+        .columns{
+           display: flex;
+           flex-direction: row;
+        }
+        .lcol, .rcol{
+            background-color: whitesmoke;
+            padding: 10px;
+            margin:0 8px;
+            width: 50%;
+        }
+        
+        .title{
+            margin: 12px 0px 12px 0px;
+            text-align: center;
+        }
+        .profile{
+            background-color: whitesmoke;
+            padding: 10px 90px 10px 10px;
+            display: inline-block;
+            margin: 20px 10px 20px 12px;
+        }
+        .p{
+            padding-bottom:12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div class="nav">
+            <ul>
+                <li><a href="">Link 1</a></li>
+                <li><a href="">Link 2</a></li>
+                <li><a href="">Link 3</a></li>
+                <li><a href="">Link 4</a></li>
+                <li><a href="">Link 5</a></li>
+            </ul>
+        </div>
+        <div class="columns">
+            <div class="lcol malkata">
+                <div class="title">This is left column</div>
+                <div><img class="img" src="http://placehold.co/150x150" alt=""></div>
+            </div>
+            <div class="rcol golemiq">
+                <div class="title">This is right column</div>
+                <div><img class="img" src="http://placehold.co/150x150" alt=""></div>
+            </div>
+        </div>
+        <div class="p">
+            <div class="profile">
+                Вашето име, специаност, факултетен номер
+            </div>
+            <p>Lorem ipsum, dolor sit amet, consectetur adipisicing elit. Minima aut error corporis magnam perferendis ratione, quibusdam vel rerum soluta, vero maiores accusantium optio, minus numquam sequi iusto repudiandae incidunt, ad! </p>
+            <p>Lorem ipsum, dolor sit amet, consectetur adipisicing elit. Minima aut error corporis magnam perferendis ratione, quibusdam vel rerum soluta, vero maiores accusantium optio, minus numquam sequi iusto repudiandae incidunt, ad! </p>
+            <p>Lorem ipsum, dolor sit amet, consectetur adipisicing elit. Minima aut error corporis magnam perferendis ratione, quibusdam vel rerum soluta, vero maiores accusantium optio, minus numquam sequi iusto repudiandae incidunt, ad! </p>
+            <p>Lorem ipsum, dolor sit amet, consectetur adipisicing elit. Minima aut error corporis magnam perferendis ratione, quibusdam vel rerum soluta, vero maiores accusantium optio, minus numquam sequi iusto repudiandae incidunt, ad! </p>
+        </div>
+    </div>
+</body>
+</html>
