@@ -77,12 +77,36 @@
                 });
             }); 
 
-            p[0].style['display'] = 'none';
-            p[p.length-1].style['display'] = 'none';
+            // p[0].style['display'] = 'none';
+            // p[p.length-1].style['display'] = 'none';
 
+            let elements = document.body.querySelectorAll('*');
+            elements.forEach(item => {
+                item.addEventListener('mouseenter', (e) => {
+                    e.target.classList.add('gold');
+                });
+
+                item.addEventListener('mouseleave', (e) => {
+                    e.target.classList.remove('gold');
+                });
+            });
+
+            let arr = [1, 15, 88, 34];
+            let paragraphs = document.querySelectorAll('p');
+            paragraphs.forEach((item, index) => {
+                item.innerText = arr[index];
+            });
+
+            for(let i = 0; i < paragraphs.length; i++){
+                paragraphs[i].innerText = arr[i];
+            }
         });
     </script>
     <style>
+        .gold{
+            background: gold!important;
+        }
+
         p{
             margin:12px 16px;
             color:white;

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<h1></h1>
+	<input type="button" value="По-малко" class="lower"/>
+	<input type="button" value="По-голямо" class="higher"/>
+	<script>
+		let heading = document.querySelector('h1');
+		let lower = document.querySelector('.lower');
+		let higher = document.querySelector('.higher');
+		let number = 0;
+		let max = 1000;
+		let min = 1;
+		
+		rnd();
+		lower.addEventListener('click', (e) => {
+			max = number - 1;
+			console.log('min = ' + min, 'max = ' + max);
+			rnd();
+		});
+
+		higher.addEventListener('click', (e) => {
+			min = number + 1;
+			console.log('min = ' + min, 'max = ' + max);
+			rnd();
+		});
+
+		function rnd(){
+			if(min <= max){
+				number = Math.floor(Math.random()*(max - min + 1) + min);
+			}
+			heading.innerText = number;
+		}
+
+
+		// zad 7
+
+		let input = prompt('enter numbers:');
+		let height = parseInt(input.split(" ")[0]);
+		let climb = parseInt(input.split(" ")[1]);
+		let fall = parseInt(input.split(" ")[2]);
+		let dayCount = 0;
+		let reachedHeight = 0;
+
+		while(reachedHeight < height){
+			reachedHeight = reachedHeight + climb;
+			dayCount++;
+			if(reachedHeight >= height){
+				break;
+			}
+			reachedHeight = reachedHeight - fall;
+			
+		}
+		console.log(dayCount);
+	</script>
+</body>
+</html>

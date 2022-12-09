@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<input type="text">
+	<input type="button" value="Click me">
+	<!-- <img src="https://cataas.com/c" alt=""> -->
+	<script>
+		let btn = document.querySelector('[type=button]');
+		let inp = document.querySelector('[type=text]');
+
+		btn.addEventListener('click', (e) => {
+			let count = parseInt(inp.value);
+			for(let i = 0; i < count; i++){
+				let img = document.createElement('img');
+				img.src = 'https://cataas.com/c';
+				img.style.width = '300px';
+				document.body.append(img);
+				img.addEventListener('mouseenter', (e) => {
+					e.target.style.width = parseInt(e.target.style.width)/2 + 'px';
+				});	
+			}
+			// let imgs = document.querySelectorAll('img'); 
+			// imgs.forEach(item => {
+			// 	item.addEventListener('mouseenter', (e) => {
+			// 		item.style.width = parseInt(item.style.width)/2 + 'px';
+			// 	});
+			// });
+		});
+
+		
+
+		// let btn = document.querySelectorAll('input')[1];
+		// let inp = document.querySelectorAll('input')[0];
+	</script>
+</body>
+</html>
